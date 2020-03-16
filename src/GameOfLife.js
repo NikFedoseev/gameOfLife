@@ -1,7 +1,7 @@
 import { getInitialMatrix, fillRandomStateMatrix } from "./utils";
 
 export class GameOfLife {
-  constructor(matrixSizeRow, matrixSizeCol, initialMatrixPath = null) {
+  constructor({ matrixSizeRow, matrixSizeCol, initialMatrixPath = null }) {
     this.initializedWithInitalMatrix = false;
     if (initialMatrixPath) {
       this.matrix = getInitialMatrix(initialMatrixPath);
