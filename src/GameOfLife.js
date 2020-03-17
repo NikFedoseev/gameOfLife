@@ -79,19 +79,19 @@ export class GameOfLife {
         if (currentCell.getState() == "1") {
           if (neighboursState.alive >= 3) {
             currentCell.setState("0");
-            break;
+            continue;
           } else if (neighboursState.alive >= 2) {
             currentCell.setState("0");
-            break;
+            continue;
           } else {
             currentCell.setState("0");
-            break;
+            continue;
           }
         }
         if (currentCell.getState() === "0") {
           if (neighboursState.alive == 3) {
             currentCell.setState("1");
-            break;
+            continue;
           }
         }
       }
